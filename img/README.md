@@ -1,20 +1,24 @@
 # Assets do e-mail
 
-Imagens referenciadas por `email-dia-do-cliente-v2.html`. Exporte nestas dimensões
-(2x a largura de exibição, para telas retina) e coloque os arquivos nesta pasta.
+Extraídos do export do Claude Design (`Email_Semana_do_Cliente_-_Inter_Risk.html`),
+que embute as imagens em base64 no bundle.
 
-| Arquivo | Dimensão de origem | Exibição no e-mail | Uso |
-|---|---|---|---|
-| `hero-1200x520.jpg` | 1200 × 520 | 600 × 260 | Banner principal, sobre fundo navy |
-| `faixa-garantia-1200x400.jpg` | 1200 × 400 | 600 × 200 | Faixa de Seguro Garantia, clicável |
-| `interrisk-logo-branco.png` | ≥ 450 px de largura, fundo transparente | 150 px (header) e 120 px (rodapé) | Logo branco sobre navy |
+| Arquivo | Dimensão | Exibição | Peso | Uso |
+|---|---|---|---|---|
+| `hero-1200x520.jpg` | 1200 × 520 | 600 × 260 | 84 KB | Hero — Inter Experience |
+| `faixa-garantia-1200x400.jpg` | 1200 × 400 | 600 × 200 | 21 KB | Faixa entre os blocos 01 e 02/03 |
+| `interrisk-logo-branco.png` | 230 × 110 | 115 × 55 (header) e 96 × 46 (rodapé) | 5 KB | Logo branco, fundo transparente |
 
-## Ao publicar
+As duas fotos vieram do bundle como PNG (1,2 MB somados) e foram convertidas para
+JPEG progressivo (q82) — o canal alfa era totalmente opaco, então a conversão não
+perdeu transparência. O logo continua PNG, porque usa transparência de verdade.
+Total do disparo: 133 KB.
 
-Clientes de e-mail exigem URLs absolutas. Troque os caminhos relativos `img/...`
-pela URL pública do CDN/ESP antes do disparo, e preencha os placeholders
-`[LINK_...]`, `[E-MAIL DE CONTATO]`, `[TELEFONE]`, `[ENDEREÇO COMPLETO]` e
-`[NÚMERO DE REGISTRO]`.
+## Antes de disparar
 
-Paleta: navy `#002B5C` · cyan `#00BCE7` · light blue `#EBF6FD` · navy médio `#0E4178`.
-Cantos sempre retos, sem gradientes e sem sombras.
+Clientes de e-mail exigem URLs absolutas: troque `img/...` pela URL pública do
+CDN/ESP. E preencha:
+
+- `https://SEU-DOMINIO.com.br/contato` — destino do CTA
+- `[RAZÃO SOCIAL COMPLETA]`, CNPJ e endereço no rodapé
+- `%%unsubscribe_link%%` e `%%webversion_link%%` — merge tags do ESP
