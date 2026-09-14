@@ -22,3 +22,18 @@ CDN/ESP. E preencha:
 - `https://SEU-DOMINIO.com.br/contato` — destino do CTA
 - `[RAZÃO SOCIAL COMPLETA]`, CNPJ e endereço no rodapé
 - `%%unsubscribe_link%%` e `%%webversion_link%%` — merge tags do ESP
+
+---
+
+## v3 (Semana do Cliente — diagramação nova)
+
+| Arquivo | Dimensão | Exibição | Peso | Uso |
+|---|---|---|---|---|
+| `foto-inter-experience-1200x400.jpg` | 1200 × 400 | 600 × 200 | 114 KB | Foto full-bleed no fim |
+| `interrisk-logo-branco.png` | 230 × 110 | 96 × 46 | 5 KB | Logo dentro do painel navy |
+
+A v3 usa só duas imagens. O hero de 1200×520 saiu, e a foto do Inter Experience
+passou a ser a versão **colorida** — não é a mesma faixa da v2, que era duotone.
+Veio do bundle como PNG de 1,1 MB e foi convertida para JPEG progressivo q82.
+
+O logo da v3 é byte a byte igual ao da v2.
